@@ -1,0 +1,17 @@
+git clone https://github.com/AlexeyAB/darknet.git
+
+wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
+
+wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.weights
+
+./darknet detector test cfg/coco.data cfg/yolov4.cfg yolov4.weights data/dog.jpg
+
+./darknet detector test cfg/coco.data cfg/yolov4-tiny.cfg yolov4-tiny.weights data/dog.jpg
+
+./darknet detector demo cfg/coco.data cfg/yolov4.cfg yolov4.weights
+
+./darknet detector demo cfg/coco.data cfg/yolov4-tiny.cfg yolov4-tiny.weights
+
+./darknet detector demo cfg/coco.data  cfg/yolov4.cfg yolov4.weights data/traffic.mp4
+
+./darknet detector demo cfg/coco.data cfg/yolov4-tiny.cfg yolov4-tiny.weights data/traffic.mp4
